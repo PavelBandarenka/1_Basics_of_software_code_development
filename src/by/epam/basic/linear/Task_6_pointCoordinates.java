@@ -7,6 +7,9 @@ public class Task_6_pointCoordinates {
      *  и false — в противном случае.
      */
 
+    //Field borders coordinates
+    static int x1Min, x1Max, y1Min, y1Max;
+    static int x2Min, x2Max, y2Min, y2Max;
     public static void main(String[] args) {
 
         int x;
@@ -16,15 +19,22 @@ public class Task_6_pointCoordinates {
         x = -1;
         y = 2;
 
-        inArea = checkCoordinates(x, y);
-        System.out.println("(" + x + ", " + y + ") " + inArea);
-    }
+        x1Min = -2;
+        x1Max = 2;
+        y1Min = 0;
+        y1Max = 4;
 
-    public static boolean checkCoordinates(int x, int y) {
-        if (x >= -2 && x <= 2 && y >= 0 && y <= 4) {
-            return true;
-        } else {
-            return x >= -4 && x <= 4 && y >= -3 && y <= 0;
-        }
+        x2Min = -4;
+        x2Max = 4;
+        y2Min = -3;
+        y2Max = 0;
+
+        inArea = isInArea(x, y);
+
+        System.out.println("(" + x + ", " + y + ") is in area: " + inArea);
+    }
+    private static boolean isInArea(int x, int y) {
+        return (x >= x1Min && x <= x1Max && y >= y1Min && y <= y1Max) ||
+                (x >= x2Min && x <= x2Max && y >= y2Min && y <= y2Max);
     }
 }
