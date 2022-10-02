@@ -26,27 +26,30 @@ public class Task_3_pointsAtLine {
 
     }
 
-    public static boolean onTheSameLine(double triangleArea) {
-        return triangleArea == 0;
-    }
-
-    public static double checkTriangleExist(double x1, double y1, double x2, double y2, double x3, double y3) {
-        double triangleArea;
-        triangleArea = ((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3)) / 2;
-        return triangleArea;
-    }
-
     public static void checkIfCollinear(double x1, double y1, double x2, double y2, double x3, double y3) {
         double triangleArea;
-        boolean sameLine;
+        boolean isOnSameLine;
 
-        triangleArea = checkTriangleExist(x1, y1, x2, y2, x3, y3);
-        sameLine = onTheSameLine(triangleArea);
+        triangleArea = checkIfTriangleExist(x1, y1, x2, y2, x3, y3);
+        isOnSameLine = isOnTheSameLine(triangleArea);
 
-        if (sameLine) {
+        if (isOnSameLine) {
             System.out.println("A,B and C are collinear  ");
         } else {
             System.out.println("A,B and C are NOT collinear  ");
         }
     }
+
+    public static double checkIfTriangleExist(double x1, double y1, double x2, double y2, double x3, double y3) {
+        double triangleArea;
+        triangleArea = ((x1 - x3) * (y2 - y3) - (x2 - x3) * (y1 - y3)) / 2;
+        return triangleArea;
+    }
+
+    public static boolean isOnTheSameLine(double triangleArea) {
+        return triangleArea == 0;
+    }
+
+
+
 }

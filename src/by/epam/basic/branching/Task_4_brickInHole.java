@@ -20,20 +20,18 @@ public class Task_4_brickInHole {
         y = 6;
         z = 7;
 
-        checkIfSuitable(a, b, x, y, z);
+        checkSlot(a, b, x, y, z);
     }
 
-    public static void checkIfSuitable(int a, int b, int x, int y, int z) {
-        boolean suitableSize;
-        suitableSize = sidesFit(a, b, x, y, z);
-        if (suitableSize) {
+    public static void checkSlot(int a, int b, int x, int y, int z) {
+        if (isRectangleFit(a, b, x, y, z)) {
             System.out.println("Brick went through the hole ");
         } else {
             System.out.println("brick cannot go through the hole ");
         }
     }
 
-    public static boolean sidesFit(int a, int b, int x, int y, int z) {
+    public static boolean isRectangleFit(int a, int b, int x, int y, int z) {
         boolean xyAB;
         boolean xzAB;
         boolean yzAB;

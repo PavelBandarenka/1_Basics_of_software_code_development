@@ -19,22 +19,18 @@ public class Task_5_functionValue {
     public static void calculateValue(double x) {
         double value;
         if (x <= 3) {
-            value = calculateFirstOption(x);
+            value = calculateFirstExpression(x);
         } else {
-            value = calculateSecondOption(x);
+            value = calculateSecondExpression(x);
         }
-        System.out.println(" x = " + x + "Function value = " + value);
+        System.out.println("For x = " + x + ", function value is = " + value);
     }
 
-    public static double calculateFirstOption(double x) {
-        double value;
-        value = x * x - 3 * x + 9;
-        return value;
+    public static double calculateFirstExpression(double x) {
+        return x * x - 3 * x + 9;
     }
 
-    public static double calculateSecondOption(double x) {
-        double value;
-        value = 1 / (x * x * x + 6);
-        return value;
+    public static double calculateSecondExpression(double x) {
+        return 1 / (x * x * x + 6);
     }
 }
