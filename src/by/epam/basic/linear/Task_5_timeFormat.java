@@ -9,20 +9,16 @@ public class Task_5_timeFormat {
 
     public static void main(String[] args) {
 
-        int timeInSeconds = 9567;
-
-        countTime(timeInSeconds);
-
-    }
-
-    public static void countTime(int seconds) {
+        int timeInSeconds;
         int hour;
         int minute;
 
-        hour = seconds / 3600;
-        minute = (seconds - hour * 3600) / 60;
-        seconds = (seconds - hour * 3600 - minute * 60);
+        timeInSeconds = 9567;
 
-        System.out.println(hour + "ч " + minute + "мин " + seconds + "с");
+        hour = timeInSeconds / 3600;
+        minute = (timeInSeconds - hour * 3600) / 60;
+        timeInSeconds = (timeInSeconds - hour * 3600 - minute * 60);
+
+        System.out.println(hour + "h " + minute + "min " + timeInSeconds + "sec");
     }
 }
