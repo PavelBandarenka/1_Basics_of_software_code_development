@@ -12,8 +12,8 @@ public class Task_3_functionValue {
         double y;
         double value;
 
-        x = 4.4;
-        y = 5.5;
+        x = 0.5;
+        y = 0.7;
 
         value = ((Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y))) * Math.tan(x * y);
 
