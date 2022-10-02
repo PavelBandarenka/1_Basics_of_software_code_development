@@ -15,30 +15,30 @@ public class Task_1_right_triangle {
         firstAngle = 40;
         secondAngle = 90;
 
-        checkAngles(firstAngle, secondAngle);
+        checkTriangleAngles(firstAngle, secondAngle);
 
     }
 
-    public static void checkAngles(int firstAngle, int secondAngle) {
-        boolean exist;
-        boolean rightTriangleExist;
+    public static void checkTriangleAngles(int firstAngle, int secondAngle) {
+        boolean isTriangle;
+        boolean isRightTriangle;
 
-        exist = checkTriangleExist(firstAngle, secondAngle);
-        rightTriangleExist = checkRightTriangleExist(firstAngle, secondAngle);
+        isTriangle = isTriangleExist(firstAngle, secondAngle);
+        isRightTriangle = isRightTriangleExist(firstAngle, secondAngle);
 
-        System.out.println("It is a triangle: " + exist);
-        if (exist && rightTriangleExist) {
+        System.out.println("It is a triangle: " + isTriangle);
+        if (isTriangle && isRightTriangle) {
             System.out.println("It is a right triangle");
-        } else if (exist) {
+        } else if (isTriangle) {
             System.out.println("It is not a right triangle");
         }
     }
 
-    public static boolean checkTriangleExist(int firstAngle, int secondAngle) {
+    public static boolean isTriangleExist(int firstAngle, int secondAngle) {
         return 180 > firstAngle + secondAngle;
     }
 
-    public static boolean checkRightTriangleExist(int firstAngle, int secondAngle) {
+    public static boolean isRightTriangleExist(int firstAngle, int secondAngle) {
         return 90 == firstAngle || 90 == secondAngle;
     }
 }
