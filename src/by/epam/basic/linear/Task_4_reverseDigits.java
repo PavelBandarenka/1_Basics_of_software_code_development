@@ -9,12 +9,16 @@ public class Task_4_reverseDigits {
     public static void main(String[] args) {
 
         double r;
-        double temp;
+        double tempInteger;
+        double tempFractional;
+        double result;
 
         r = 888.333;
 
-        temp = Math.floor(r) / 1000 + (r * 1000) % 1000;
+        tempInteger = r * 1000 % 1000;
+        tempFractional = Math.floor(r) / 1000;
+        result = tempFractional + tempInteger;
 
-        System.out.println("Original value: " + r + ". \nValue after rearranging the numbers: " + temp);
+        System.out.println("Original value: " + r + ". \nValue after rearranging the numbers: " + result);
     }
 }
