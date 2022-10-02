@@ -10,6 +10,7 @@ public class Task_6_pointCoordinates {
     //Field borders coordinates
     static int x1Min, x1Max, y1Min, y1Max;
     static int x2Min, x2Max, y2Min, y2Max;
+
     public static void main(String[] args) {
 
         int x;
