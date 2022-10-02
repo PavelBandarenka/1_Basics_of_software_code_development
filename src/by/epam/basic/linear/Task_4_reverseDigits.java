@@ -11,7 +11,7 @@ public class Task_4_reverseDigits {
         double r;
         double temp;
 
-        r = 666.333;
+        r = 777.333;
 
         temp = Math.floor(r) / 1000 + (r * 1000) % 1000;
 
