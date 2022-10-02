@@ -25,8 +25,16 @@ public class Task_2_maxMin {
         int minValueAB;
         int minValueCD;
 
-        minValueAB = Math.min(a, b);
-        minValueCD = Math.min(c, d);
-        return Math.max(minValueAB, minValueCD);
+        if(a<b){
+            minValueAB = a;
+        } else minValueAB = b;
+
+        if(c<d){
+            minValueCD = c;
+        } else minValueCD = d;
+
+        if (minValueAB > minValueCD){
+            return minValueAB;
+        } return minValueCD;
     }
 }
