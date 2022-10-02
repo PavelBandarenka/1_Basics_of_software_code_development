@@ -13,18 +13,25 @@ public class Task_4_multiplicationOfPowers {
     }
 
     public static void multiplyDigits(int count) {
+
         int multiply;
-        int overflow;
+        int lastValueBeforeOverflow;
 
         multiply = 1;
 
         for (int i = 1; i <= count; i++) {
-            overflow = multiply;
+            lastValueBeforeOverflow = multiply;
             multiply = multiply * i * i;
-            if (multiply < 0) {
-                System.out.println(overflow + " - is the last value before int overflow");
+            if (checkForOverFlow(multiply, lastValueBeforeOverflow)) {
                 break;
             }
         }
+    }
+
+    public static boolean checkForOverFlow (int multiply, int lastValueBeforeOverflow){
+        if (multiply < 0){
+            System.out.println(lastValueBeforeOverflow + " - is the last value before int overflow");
+            return true;
+        } else return false;
     }
 }

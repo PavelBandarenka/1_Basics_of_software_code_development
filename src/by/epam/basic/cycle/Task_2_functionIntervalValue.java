@@ -3,8 +3,8 @@ package by.epam.basic.cycle;
 public class Task_2_functionIntervalValue {
 
     /*  Вычислить значения функции на отрезке [а,b] c шагом h:
-     *  y={x,x>2
-     *  -x,x<=2
+     *  y= {x,x>2
+     *     {-x,x<=2
      */
 
     public static void main(String[] args) {

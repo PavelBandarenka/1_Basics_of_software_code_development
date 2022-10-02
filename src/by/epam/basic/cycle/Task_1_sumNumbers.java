@@ -13,10 +13,10 @@ public class Task_1_sumNumbers {
         int a;
         a = enterFromConsole(">>  ");
 
-        sum(a);
+        sumNumbers(a);
     }
 
-    public static void sum(int a) {
+    public static void sumNumbers(int a) {
         int sum = 0;
         if (a > 0) {
             for (int i = 1; i <= a; i++) {

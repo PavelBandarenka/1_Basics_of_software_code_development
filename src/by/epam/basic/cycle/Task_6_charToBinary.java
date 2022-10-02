@@ -10,18 +10,15 @@ public class Task_6_charToBinary {
 
     public static void main(String[] args) {
 
-        char ch;
+        int startingPoint;
+        int endPoint;
 
-        ch = 'b';
+        startingPoint = 65;
+        endPoint = 90;
 
-        findBinaryConformity(ch);
+        for (int i = startingPoint; i <= endPoint; i++) {
 
-    }
-
-    public static void findBinaryConformity(char ch) {
-        String a;
-
-        a = Integer.toBinaryString(ch);
-        System.out.println(a);
+            System.out.println((char)i + " --> " + i);
+        }
     }
 }

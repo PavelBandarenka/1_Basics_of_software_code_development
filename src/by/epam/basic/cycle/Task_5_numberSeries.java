@@ -18,25 +18,21 @@ public class Task_5_numberSeries {
     }
 
     public static void calcSum(double e) {
-        double a;
         int n;
         double sum;
 
-        a = 1.0 / 6.0;
         n = 1;
-        sum = a;
+        sum = 0;
 
-        while (Math.abs(a) >= e) {
-            a = calcCommonMemberVal(n);
-            sum += a;
+        while (Math.abs(calcCommonMemberVal(n)) >= e) {
+            sum += calcCommonMemberVal(n);
+            System.out.println(n + "value : " + calcCommonMemberVal(n));
             n++;
         }
-        System.out.println(sum);
+        System.out.println("Sum is : " + sum);
     }
 
     public static double calcCommonMemberVal(int degree) {
-        double commonMemberValue;
-        commonMemberValue = 1 / Math.pow(2, degree) + 1 / Math.pow(3, degree);
-        return commonMemberValue;
+        return 1 / Math.pow(2, degree) + 1 / Math.pow(3, degree);
     }
 }
